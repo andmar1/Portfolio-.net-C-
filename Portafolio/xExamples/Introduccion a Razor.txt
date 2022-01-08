@@ -1,0 +1,44 @@
+﻿@model Persona
+
+@{
+    ViewData["Title"] = "Pagina Principal";
+    string convertirMayusculas(string valor)
+    {
+        return valor.ToUpper() + "ZXC";
+    }
+    DateTime hoy = DateTime.Now;
+
+    var nombres = new List<string>() { "Felipe", "Roberto", "Fernando", "Guadalupe" };
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Soy @Model.Nombre y tengo @Model.Edad años de edad</h1>
+    <h2> Conversion a mayusculas ---> @convertirMayusculas(Model.Nombre)</h2>
+    <h3>La fecha del dia de hoy es: @hoy.ToString("dd/MM/yyyy hh:mm:ss tt") </h3>
+
+    <h5>Lista de Nombres</h5>
+
+    <ul>
+        @foreach (var nombre in nombres)
+        {
+            <li>@nombre</li>
+        }
+    </ul>
+
+
+    @if(Model.Edad >= 18)
+    {
+        <h4>Eres mayor de edad, puedes entrar <button>Entrar</button></h4>
+
+    }
+    else
+    {
+        <h4>Eres menor no puedes entrar</h4>
+    }
+
+    <h2>Soy un desarrollador fullstack, especializado en tecnologias .NET y JavaScript</h2>
+    <img id="foto" src="~/imagenes/antonioA.jpg" alt="Foto de Antonio"/> 
+
+
+</div>

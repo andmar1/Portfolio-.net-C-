@@ -1,0 +1,29 @@
+﻿//Deshabiliar nullos en proyecto principal 
+
+Controller Home
+namespace Portafolio.Models
+{
+    public class Persona
+    {
+        //Habilitar null
+        public string Nombre { get; set; }
+        public int Edad { get; set; }
+    }
+}
+
+Vista Home Index 
+
+@model Persona
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Soy @Model.Nombre y tengo @Model.Edad años de edad</h1>
+
+    <h2>Soy un desarrollador fullstack, especializado en tecnologias .NET y JavaScript</h2>
+    <img id="foto" src="~/imagenes/antonioA.jpg" alt="Foto de Antonio"/> 
+
+
+</div>

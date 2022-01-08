@@ -1,0 +1,22 @@
+﻿del lado del controlador
+
+
+public IActionResult Index()
+    {
+        ViewBag.Nombre = "Antonio Andrade Mares";
+        ViewBag.Edad = 24;
+        return View();
+    }
+
+
+del lado de al vista
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Soy @ViewBag.Nombre Edad= @ViewBag.Edad</h1>
+    <h2>Soy un desarrollador fullstack, especializado en tecnologias .NET y JavaScript</h2>
+    <img id="foto" src="~/imagenes/antonioA.jpg" alt="Foto de Antonio"/> 
+</div>
